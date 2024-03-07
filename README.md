@@ -30,7 +30,7 @@ files/{CSC_TD_11042023_MW_allcolumns.csv, tbabs.data}
 
 * conda create -n muwclass python=3.9
 
-* run 'bash install-packages.sh' under ciao environment to install all required packages 
+* run 'bash install-packages.sh' under muwclass environment to install all required packages 
 
 * clone the [NWAY package](https://github.com/JohannesBuchner/nway) to your local desktop and change the nway_dir variable in nway_match.py line 25 to the directory where you clone the nway package
 
