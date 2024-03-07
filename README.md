@@ -6,7 +6,8 @@
 <sup>1</sup>The George Washington University <sup>2</sup>NASA GSFC <sup>3</sup>Texas State University
 
 ## CHECK our [MUWCLASS paper](https://ui.adsabs.harvard.edu/abs/2022ApJ...941..104Y/abstract)
-## Related papers: [NGC 3532](https://ui.adsabs.harvard.edu/abs/2023ApJ...948...59C/abstract), [13 FGL-LAT source](https://ui.adsabs.harvard.edu/abs/2024ApJ...961...26R/abstract), [Visualization tool](https://ui.adsabs.harvard.edu/abs/2021RNAAS...5..102Y/abstract), [4XMM-DR13 TD](https://ui.adsabs.harvard.edu/abs/2024arXiv240215684L/abstract)
+## Related Papers: [NGC 3532](https://ui.adsabs.harvard.edu/abs/2023ApJ...948...59C/abstract), [13 FGL-LAT source](https://ui.adsabs.harvard.edu/abs/2024ApJ...961...26R/abstract), [Visualization tool](https://ui.adsabs.harvard.edu/abs/2021RNAAS...5..102Y/abstract), [4XMM-DR13 TD](https://ui.adsabs.harvard.edu/abs/2024arXiv240215684L/abstract)
+## Visualization Tools : [CSCv2.0 Training Dataset](https://muwclass.github.io/XCLASS_CSCv2/), [4XMM-DR13 Training Dataset](https://yichaolin-astro.github.io/4XMM-DR13-XCLASS/), [4FGL-DR4 catalog visualization](https://muwclass.github.io/GCLASS/), [Classification of CSCv2.0 Sources within Unidentified 4FGL-DR4 Sources](https://muwclass.github.io/MUWCLASS_4FGL-DR4/)
 
 ### contact huiyang@gwu.edu if you have any questions
 
