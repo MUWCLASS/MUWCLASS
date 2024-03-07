@@ -34,24 +34,8 @@ files/{CSC_TD_11042023_MW_allcolumns.csv, tbabs.data}
 
 * run 'bash install-packages.sh' under ciao environment to install all required packages 
 
-* clone the [NWAY package](https://github.com/JohannesBuchner/nway) to your local desktop and change the nway_dir variable to the directory where you clone the nwa package
+* clone the [NWAY package](https://github.com/JohannesBuchner/nway) to your local desktop and change the nway_dir variable in nway_match.py line 25 to the directory where you clone the nway package
 
-#### other required packages 
-
-* run 'bash install-packages.sh' under ciao-4.14-muwclass environment to install all required packages 
-
-* then, make sure to enable widgetsnbextension and ipyaladin, run 
-* jupyter nbextension enable --py widgetsnbextension
-* jupyter nbextension enable --py --sys-prefix ipyaladin
-- on your terminal 
-
-* You might also need to manually register the existing ds9 with the xapns name server by selecting the ds9 File->XPA->Connect menu option so your ds9 will be fully accessible to pyds9.
-
-* You need to install gcc to properly install some of the packages
-
-* If you have problems importing some packages, try to pip install the packages that fail to import manually under the conda environment
-
-* Currently there is an issue with ipyaladin package (Failed to load model class 'ModelAladin' from module 'ipyaladin')
  
 
 
