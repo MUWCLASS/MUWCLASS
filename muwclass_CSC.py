@@ -44,7 +44,7 @@ Gaia.ROW_LIMIT = -1 # Ensure the default row limit.
 import warnings
 warnings.filterwarnings("ignore", message=".*The 'nopython' keyword.*")
 
-import shap
+# import shap
 
 from physical_oversampling import physical_oversample_csv, test_reddening_grid_csv
 from nway_match import CSCviewsearch
@@ -1670,7 +1670,7 @@ def convert_standard(df_convert, ra='RA',dec='DEC',ra_stack='RA_stack',dec_stack
     if stack_col==False:
         if inverse==False:
 
-            c1 = SkyCoord(ra=df_convert[ra]*u.deg, dec=df_convert[dec]*u.deg, frame='icrs')
+            c1 = SkyCoord(ra=df_convert[ra], dec=df_convert[dec],unit=u.deg, frame='icrs')
 
             df_convert[xi] = 3600.*(180./np.pi)*(np.cos(c1.dec.rad)*np.sin(c1.ra.rad - (ra_stack*np.pi/180.))) \
                         /(np.sin(c1.dec.rad)*np.sin(dec_stack*np.pi/180.)+np.cos(c1.dec.rad)*np.cos(dec_stack*np.pi/180.)*np.cos(c1.ra.rad - (ra_stack*np.pi/180.)))
@@ -2306,8 +2306,8 @@ def stack_astrometry(field_name, RA, DEC, radius, query_dir,template_dir='./data
 
                     df_match = pd.DataFrame()
 
-                    X_cat = SkyCoord(ra=df_s_good['RA']*u.degree,         dec=df_s_good['DEC']*u.degree)
-                    G_cat = SkyCoord(ra=df_gaia_good['RA_ICRS']*u.degree, dec=df_gaia_good['DE_ICRS']*u.degree)
+                    X_cat = SkyCoord(ra=df_s_good['RA'],         dec=df_s_good['DEC'], unit=u.deg, frame='icrs')
+                    G_cat = SkyCoord(ra=df_gaia_good['RA_ICRS'], dec=df_gaia_good['DE_ICRS'], unit=u.deg, frame='icrs')
 
                     gaia_j = 1
                     #print(G_cat)

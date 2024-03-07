@@ -22,7 +22,7 @@ import glob
 import requests
 
 gaia_search_radius = 10 # arcsec
-nway_dir = '/Users/huiyang/Softwarses/nway-master/'
+nway_dir = '/home/orion51/Desktop/Research/Githubs/nway-master/'
 
 def CSCviewsearch(field_name, ra, dec, radius, query_dir, template_dir='./data',csc_version='2.0', engine='curl',adql_version='csc_query_cnt_template',suffix=''):
     # csc_version = '2.0' or 'current' for 2.1
@@ -134,6 +134,7 @@ def newcsc_prepare(df_q,X_name,name_col='name',ra_col='ra', dec_col='dec',r0_col
 
     area = 550./317000
     
+    # print('nway-write-header.py CSC')
     os.system(f'python {nway_dir}nway-write-header.py {data_dir}/{X_name}_CSC.fits CSC {area}')
     
     return None

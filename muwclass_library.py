@@ -32,7 +32,7 @@ from collections import Counter
 import warnings
 warnings.filterwarnings("ignore", message=".*The 'nopython' keyword.*")
 
-import shap
+# import shap
 
 from physical_oversampling import physical_oversample_csv, test_reddening_grid_csv
 
