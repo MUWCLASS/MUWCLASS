@@ -11,21 +11,18 @@
 
 
 # ----------------- Python 3.x ------------------------------------
-pip install notebook
-pip install scikit-learn-intelex
-pip install astropy pyvo
-pip install pandas
-pip install --pre astroquery
-pip install astroML
-pip install uncertainties
+conda install notebook
+conda install scikit-learn-intelex
+conda install astropy
+conda install conda-forge::pyvo
+conda install numpy
+conda install pandas
+conda install -c conda-forge astroquery
+conda install -c astropy astroML
 pip install gdpyc
-pip install extinction
-pip install imblearn
-pip install bokeh
-pip install colorcet
-pip install pyds9
-pip install seaborn
-pip install ipyaladin
-pip install holoviews
-pip install hvplot
-pip install git+https://github.com/cgobat/asymmetric_uncertainty.git
+conda install -c conda-forge extinction
+conda install -c conda-forge imbalanced-learn
+conda install bokeh
+conda install colorcet
+conda install healpy
+conda install -c conda-forge tqdm
