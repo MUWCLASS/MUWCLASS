@@ -26,8 +26,6 @@ files/{CSC_TD_11042023_MW_allcolumns.csv, tbabs.data}
 
 ## Softwares Installation Instruction (using conda)
 
-### simple Python 3.9 environment (without CIAO), this version turn offs the plotting functions of X-ray images
-
 * run the follow code to create a new conda environment muwclass; if you already have Python 3.9, you can use your own conda environment with additional Python packages installed from below
 
 * conda create -n muwclass python=3.9
