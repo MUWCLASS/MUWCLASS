@@ -2772,7 +2772,7 @@ def process_crossmatching(df, data_dir, field_name):
 
     df_csc = pd.read_csv(f'{data_dir}/{field_name}_wget.txt', comment='#', delimiter='\t')
     # drop per observation level rows
-    df_csc = df_csc.drop_duplicates(subset=['name']).reset_index(drop=True)
+    # df_csc = df_csc.drop_duplicates(subset=['name']).reset_index(drop=True)
     # strip whitespace from all columns
     df_csc = df_csc.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 
