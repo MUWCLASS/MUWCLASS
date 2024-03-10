@@ -134,7 +134,6 @@ def newcsc_prepare(df_q,X_name,name_col='name',ra_col='ra', dec_col='dec',r0_col
 
     area = 550./317000
     
-    # print('nway-write-header.py CSC')
     os.system(f'python {nway_dir}nway-write-header.py {data_dir}/{X_name}_CSC.fits CSC {area}')
     
     return None
