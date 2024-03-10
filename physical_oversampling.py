@@ -275,7 +275,7 @@ def test_reddening_grid_hpy(df, hpy,random_state=None):
     return dfs
    
 
-def physical_oversample_csv(TD, df_reds, random_state=None,ebv_pdf='uniform'):
+def physical_oversample_csv(TD, df_reds, random_state=None,ebv_pdf='gamma', sample_fraction=0.5):
     
     if random_state is None:
         np.random.seed(randint(1,999999999)) 
@@ -283,7 +283,16 @@ def physical_oversample_csv(TD, df_reds, random_state=None,ebv_pdf='uniform'):
         np.random.seed(random_state)
 
     TD_X, TD_y = TD, TD['Class']
-    ros = RandomOverSampler(random_state=random_state)
+    most_frequent_class = TD['Class'].value_counts().idxmax()
+    most_frequent_num = len(TD[TD['Class']==most_frequent_class])
+    sample_dict = {}
+    for clas in TD['Class'].unique():
+        # sample_dict[clas] = int(np.floor((most_frequent_num-len(TD[TD['Class']==clas]))*sample_fraction)+len(TD[TD['Class']==clas]))
+        # sample_dict[clas] = int(min(len(TD[TD['Class']==clas])/(1-min(0.999, sample_fraction)), most_frequent_num))
+        N_i = len(TD[TD['Class']==clas])
+        sample_dict[clas] = int(min(N_i * most_frequent_num / (most_frequent_num-sample_fraction*(most_frequent_num-N_i)), most_frequent_num))
+
+    ros = RandomOverSampler(random_state=random_state, sampling_strategy=sample_dict)
     X_res, y_res = ros.fit_resample(TD_X, TD_y)
 
     X_res = X_res[X_res.duplicated(subset=['name'])].reset_index(drop=True)
